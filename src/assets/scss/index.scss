@@ -1,0 +1,12 @@
+@import "font";
+@import "common";
+@import "global";
+
+@include smallScreen {
+    .fb_dialog_content iframe {
+        bottom: 80px !important;
+    }
+    iframe.fb_customer_chat_bounce_in_v2{
+        margin-bottom: 50px;
+    }
+}

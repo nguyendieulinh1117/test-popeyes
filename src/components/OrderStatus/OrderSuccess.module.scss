@@ -1,0 +1,73 @@
+@import "@assets/scss/global";
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 2px;
+        p {
+            margin: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0px;
+            gap: 4px;
+            font-family: "Archivo";
+
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+
+            color: #292929;
+            // @include smallScreen {
+            //     flex-direction: column;
+            // }
+            span {
+                font-weight: 600;
+            }
+        }
+        span {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+
+            color: #292929;
+        }
+
+        .status {
+            color: #dc3a35;
+
+            &.paid {
+                color: #4bb543;
+            }
+
+            button {
+                margin-left: 8px;
+            }
+        }
+    }
+}
+.modal-header {
+    padding-bottom: 0;
+}
+
+.modal-body {
+    text-align: center;
+    .modal-title {
+        font-weight: 700;
+    }
+}
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    button {
+        margin: 0 !important;
+    }
+}

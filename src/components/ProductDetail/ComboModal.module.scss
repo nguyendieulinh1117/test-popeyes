@@ -1,0 +1,199 @@
+.combo-modal{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &.active{
+        display: flex;
+    }
+
+    .modal{
+        position: relative;
+        background-color: white;
+        max-width: 512px;
+        width: 90%;
+        padding: 16px;
+        border-radius: 8px;
+        max-height: 90vh;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .header{
+            text-align: center;
+            border-bottom: 1px solid #DFDFDF;
+            padding-bottom: 10px;
+
+            .title{
+                font-size: 16px;
+            }
+            .close{
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                width: 15px;
+                height: 15px;
+                cursor: pointer;
+    
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .body{
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+            height:auto;
+
+            .list-product{
+                overflow: auto;
+                max-height: 70vh;
+                
+                .item{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 8px;
+                    font-size: 14px;
+                    color: #292929;
+
+                    .info{
+                        display: flex;
+
+                        .image{
+                            width: 70px;
+
+                            svg, img{
+                                width: 100%;
+                            }
+                        }
+
+                        .product{
+                            margin-left: 12px;
+
+                            .name{
+                                margin-bottom: 4px;
+                            }
+
+                            .color{
+                                ul{
+                                    display: flex;
+                                    gap: 8px;
+                                    margin: 4px 0;
+
+                                    li{
+                                        width: 22px;
+                                        height: 22px;
+                                        border-radius: 4px;
+                                        box-shadow:0px 0px 0px 1px white inset;
+                                        overflow: hidden;
+                                        cursor: pointer;
+                                        border: 1px solid #8A8A8A;
+                                        &.active{
+                                            border-color: #DC3A35;
+                                        }
+
+                                        div{
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: 4px;
+                                            
+                                        }
+
+                                        &.active{
+                                            border: #DC3A35 1px solid;
+                                            div{
+                                                border: 1px solid white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .size{
+                                ul{
+                                    display: flex;
+                                    gap: 8px;
+                                    margin: 4px 0;
+
+                                    li{
+                                        min-width: 22px;
+                                        min-height: 22px;
+                                        border-radius: 8px;
+                                        border: 1px solid #292929;
+                                        // overflow: hidden;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        cursor: pointer;
+                                        padding: 3px 7px;
+
+                                        &.active{
+                                            border: #DC3A35 1px solid;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .price{
+                        display: flex;
+                        justify-content: flex-end;
+                        font-weight: 600;
+
+                        del{
+                            margin-left: 8px;
+                            color: #8A8A8A;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+
+            .total{
+                color: #DC3A35;
+                font-weight: 600;
+                font-size: 16px;
+                padding: 16px 0;
+                display: flex;
+                justify-content: flex-end;
+
+                del{
+                    font-size: 13px;
+                    color: #8A8A8A;
+                    font-weight: 400;
+                    margin-left: 12px;
+                }
+            }
+        }
+
+        .footer{
+            button{
+                background-color: #DC3A35;
+                width: 100%;
+                padding: 16px;
+                color: white;
+                text-align: center;
+                border-radius: 48px;
+
+                &.disable{
+                    pointer-events: none;
+                    opacity: 0.3;
+                }
+            }
+        }
+    }
+    
+}

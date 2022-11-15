@@ -1,0 +1,118 @@
+@import "@assets/scss/global.scss";
+
+.filter-mobile {
+
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        position: relative;
+
+        .body {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: calc(100% + 1px);
+            left: -15px;
+            right: -15px;
+            background: #fff;
+            z-index: 2;
+            padding: 12px 8px;
+
+
+
+            li {
+                h3 {
+                    margin: 0;
+                    font-size: 10px;
+                    font-weight: 400;
+                    line-height: 10px;
+                }
+
+            }
+        }
+
+        .head {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            position: relative;
+            z-index: 2;
+
+            span {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 18px;
+            }
+
+            svg {
+                margin-left: 4px;
+            }
+
+        }
+
+        .sort {
+            position: relative;
+
+            [class~="prefix__control"] {
+                border: none;
+                outline: none !important;
+                box-shadow: none !important;
+            }
+
+            [class~="prefix__value-container"] {
+                padding: 0;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 18px;
+            }
+
+            [class~="prefix__indicators"] {
+
+                [class~="prefix__indicator-separator"] {
+                    display: none;
+                }
+
+                [class~="prefix__indicator"] {
+                    padding: 0;
+
+                    svg {
+                        path {
+                            fill: rgb(41, 41, 41);
+                        }
+                    }
+                }
+            }
+
+            [class~="prefix__menu"] {
+                width: 150px;
+            }
+        }
+
+        .size,
+        .color {
+            display: inline;
+        }
+
+        .active {
+            &:before {
+                position: absolute;
+                content: '';
+                top: 41px;
+                right: -15px;
+                bottom: 0;
+                left: -15px;
+                height: 100vh;
+                background-color: rgb(0 0 0 / 30%);
+                z-index: 2;
+            }
+        }
+
+        .size {}
+
+        .filter {}
+    }
+}

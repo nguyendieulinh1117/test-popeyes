@@ -1,0 +1,323 @@
+@import "@assets/scss/global";
+
+.header {
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    padding-top: 8px;
+
+    &.scroll {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        transition: all 0.5s;
+
+        .container {
+            @include smallScreen {
+                padding: 0 8px;
+            }
+        }
+
+        .box {
+            @include smallScreen {
+                gap: 8px;
+                justify-content: unset;
+            }
+
+            .logo {
+                @include smallScreen {
+                    display: none;
+                }
+            }
+
+            .logo-scroll {
+                @include smallScreen {
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+
+            .search {
+                @include smallScreen {
+                    order: 2;
+                    margin-top: 0;
+                    width: calc(100% - 144px);
+                }
+            }
+
+            .tools {
+                @include smallScreen {
+                    order: 3;
+                    position: absolute;
+                    right: 16px;
+                }
+            }
+        }
+    }
+
+    &.scroll-down {
+        transform: translateY(-100%);
+
+        @include smallScreen {
+            transform: none;
+        }
+    }
+
+    &.scroll-up {
+        transform: none;
+
+        @include smallScreen {
+            transform: none;
+        }
+    }
+
+    @include smallScreen {
+        padding-bottom: 8px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .container {
+        position: relative;
+        width: 100%;
+
+        @include smallScreen {
+            width: 100%;
+        }
+
+        @include maxLargeScreen {
+            width: 91%;
+        }
+        padding: 0 16px;
+        margin: 0 auto;
+    }
+
+    .box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 0;
+        margin-bottom: 8px;
+        transition: all 0.5s;
+
+        @include smallScreen {
+            margin-bottom: 0;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .menu-bar {
+            position: relative;
+        }
+
+        .logo {
+            position: relative;
+            cursor: pointer;
+            order: 0;
+            transition: all 0.5s;
+        }
+
+        .logo-scroll {
+            display: none;
+            transition: all 0.5s;
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-left: 16px;
+
+            li {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                cursor: pointer;
+
+                // @include largeScreen {
+                //     &:first-child {
+                //         width: 100%;
+                //     }
+                // }
+
+                &:not(:last-child) {
+                    margin-right: 24px;
+                }
+
+                span {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    color: #c22026;
+                }
+
+                svg {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        .search {
+            position: relative;
+            width: calc(400 / 1300 * 100%);
+            order: 1;
+
+            @include smallScreen {
+                width: 100%;
+                margin-top: 8px;
+                order: 3;
+            }
+        }
+
+        .tools {
+            display: flex;
+            align-items: flex-start;
+            text-align: center;
+            justify-content: center;
+            flex-shrink: 0;
+            order: 2;
+
+            li {
+                padding: 8px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+                position: relative;
+                gap: 8px;
+
+                button {
+                    display: flex;
+                    gap: 8px;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0;
+                    font-size: 10px;
+                    font-weight: 400;
+                    line-height: initial;
+                    letter-spacing: 0.04em;
+                }
+
+                figure {
+                    position: relative;
+
+                    figcaption {
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        background: #dc3a35;
+                        color: #fff;
+                        font-size: 7px;
+                        font-weight: 600;
+                        line-height: 7px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 10px;
+                    font-weight: 400;
+                    line-height: initial;
+                    letter-spacing: 0.04em;
+                }
+
+                .cart-hover {
+                    visibility: hidden;
+                }
+
+                &:hover {
+                    svg {
+                        path {
+                            stroke: #c22026;
+                        }
+                    }
+
+                    p {
+                        color: #c22026;
+                    }
+
+                    .cart-hover {
+                        visibility: visible;
+                    }
+
+                    .login-hover {
+                        display: block;
+                    }
+                }
+
+                &:first-child {
+                    button {
+                        p {
+                            max-width: 90px;
+                        }
+                    }
+                }
+
+                .login-hover {
+                    position: absolute;
+                    width: 150px;
+                    top: 100%;
+                    right: 0;
+                    background-color: #fff;
+                    z-index: 2;
+                    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+                    display: none;
+
+                    ul {
+                        text-align: left;
+
+                        li {
+                            padding: 12px 8px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 18px;
+                            color: #292929;
+                            display: block;
+
+                            svg {
+                                path {
+                                    stroke: initial;
+                                    fill: #292929;
+                                }
+                            }
+
+                            &:hover {
+                                a {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .logout {
+                            border-top: 1px solid #bfbfbf;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            gap: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu {
+        position: relative;
+    }
+}

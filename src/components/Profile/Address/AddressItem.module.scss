@@ -1,0 +1,99 @@
+@import "@assets/scss/global.scss";
+
+.address-item {
+    width: calc(50% - 10px);
+    border: 1px #DFDFDF solid;
+    border-radius: 8px;
+    padding: 14px 16px 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+
+    @include smallScreen {
+        width: 100%;
+    }
+
+    .left {
+        .name {
+            width: fit-content;
+            font-weight: 600;
+            position: relative;
+            margin-bottom: 10px;
+
+            .is-default {
+                font-weight: 400;
+                font-size: 10px;
+                position: absolute;
+                padding: 6px 4px;
+                background-color: #DC3A35;
+                color: white;
+                border-radius: 8px;
+                font-size: 10px;
+                width: max-content;
+                left: calc(100% + 10px);
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .location {
+            margin-top: 6px;
+        }
+    }
+
+    .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        white-space: nowrap;
+
+        .edit-btn {
+            color: #DC3A35;
+            font-size: 13px;
+        }
+
+        .delete-btn {
+            margin-left: 16px;
+        }
+    }
+}
+
+.modal-body {
+    padding-top: 0;
+    padding-bottom: 4px;
+}
+
+.modal-header {
+    padding-bottom: 0;
+}
+
+.modal-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #000000;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.modal-content {
+    position: relative;
+    padding: 8px;
+    border: 1px solid #DFDFDF;
+    border-radius: 4px;
+
+    p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        text-align: left;
+        color: #8A8A8A;
+        span{
+            color: #292929;
+            margin-right: 4px;
+            display: inline-block;
+        }
+    }
+}

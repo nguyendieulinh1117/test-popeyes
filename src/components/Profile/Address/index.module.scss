@@ -1,0 +1,83 @@
+@import "@assets/scss/global.scss";
+
+.address{
+    background-color: white;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 32px 20px;
+    font-size: 14px;
+
+    @include smallScreen{
+        padding: 0;
+        min-height: 290px;
+    }
+
+    .center{
+        width: 100%;
+        padding: 0px;
+
+        @include smallScreen{
+            padding: 0 16px;
+        }
+    }
+
+    .title-form{
+        width: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 24px;
+        position: relative;
+
+        .return-btn{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            cursor: pointer;
+            
+            svg{
+                width: 17px;
+            }
+        }
+    }
+
+    .no-address{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span{
+            color: #292929;
+        }
+
+
+        .btn-submit{
+            margin-top: 24px;
+            text-transform: capitalize;
+
+            @include smallScreen{
+                margin-top: 80px;
+            }
+        }
+    }
+
+    .have-address{
+        .create-address{
+            display: flex;
+
+            .btn-add{
+                margin-left: 14px;
+                color: #DC3A35;
+                cursor: pointer;
+            }
+        }
+
+        .list-address{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}

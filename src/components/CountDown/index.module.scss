@@ -1,0 +1,33 @@
+$spacing: 8px;
+
+.countdown-wrapper {
+  display: flex;
+  gap: $spacing;
+  align-items: center;
+  color: #fff;
+
+  .days-group {
+    display: flex;
+    align-items: center;
+    color: #8E9AAB;
+
+    span {
+      margin-right: $spacing / 2;
+      background: #5DAC46;
+      color: #545454;
+    }
+  }
+
+  .countdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: #F2F2F2;
+    font-size: 18px;
+    color: #545454 !important;
+  }
+}

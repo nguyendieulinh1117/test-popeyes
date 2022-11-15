@@ -1,0 +1,24 @@
+@import "@assets/scss/global";
+.map {
+    width: 65%;
+    max-width: 823px;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.15));
+    position: relative;
+    @include smallScreen {
+        width: 100%;
+        max-width: unset;
+        filter: unset;
+    }
+    .loading {
+        height: 100%;
+        border-radius: 8px;
+    }
+    .container {
+        height: 800px;
+        border-radius: 8px;
+        @include smallScreen {
+            height: 300px;
+            border-radius: 8px 8px 0 0;
+        }
+    }
+}

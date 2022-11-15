@@ -1,0 +1,135 @@
+@import "@assets/scss/global.scss";
+
+.product-tab {
+    margin-top: 16px;
+
+    .box {
+        background-color: #fff;
+        padding: 40px 16px;
+
+        @include smallScreen {
+            padding: 24px 0;
+            margin: 0 -15px;
+        }
+
+        .title {
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 24px;
+
+            h3 {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 28px;
+                text-align: center;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .tab {
+            margin-bottom: 32px;
+
+            @include smallScreen {
+                margin-bottom: 16px;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include smallScreen {
+                    white-space: nowrap;
+                    overflow-x: auto;
+                    justify-content: center;
+
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 575px) {
+                    justify-content: flex-start;
+                }
+
+                li {
+                    margin: 0 12px;
+
+                    @include smallScreen {
+                        margin: 0 8px;
+                    }
+
+                    button {
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 18px;
+                        text-align: center;
+                        padding: 11px 16px;
+                        border-radius: 40px;
+                        background-color: #f2f2f2;
+                        text-transform: uppercase;
+                    }
+
+                    &.active {
+                        button {
+                            color: #fff;
+                            background-color: #292929;
+                        }
+                    }
+                }
+            }
+        }
+
+        .list {
+            .list-box {
+                display: flex;
+                flex-wrap: wrap;
+
+                @include smallScreen {
+                    padding: 0 8px;
+                }
+
+                .product-col {
+                    margin: 0;
+                    margin-bottom: 32px;
+                    width: calc(100% / 5);
+
+                    @include smallScreen {
+                        width: calc(100% / 2);
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .btn {
+                text-align: center;
+
+                @include smallScreen {
+                    margin-top: 16px;
+                }
+
+                .view-more {
+                    width: 240px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    padding: 12px;
+                    color: #E95056;
+                    border: 1px solid #E95056;
+                    border-radius: 48px;
+                    display: inline-block;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        background-color: #E95056;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

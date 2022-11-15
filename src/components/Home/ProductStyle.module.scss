@@ -1,0 +1,179 @@
+@import "@assets/scss/global";
+
+.product-style {
+    margin-top: 16px;
+
+    @include smallScreen {
+        background-color: #fff;
+    }
+
+    .box {
+        padding: 16px;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+
+        @include smallScreen {
+            flex-direction: column;
+            padding: 24px 0;
+            gap: 0;
+        }
+
+        .banner {
+            width: 340px;
+            flex-shrink: 0;
+            position: relative;
+
+            @include smallScreen {
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            figure {
+                @include smallScreen {
+                    width: calc(115/375*100%);
+                    flex-shrink: 0;
+                }
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            figcaption {
+                background-color: #C53034;
+                position: absolute;
+                left: 50px;
+                right: 50px;
+                color: #fff;
+                bottom: 100px;
+                padding: 40px 20px;
+                text-align: center;
+
+                @include smallScreen {
+                    position: static;
+                    margin: 0 25px;
+                    padding: 20px 0;
+                    width: calc(100% - 115/375*100%);
+                }
+
+                h3 {
+                    margin: 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    margin-bottom: 12px;
+
+                    @include smallScreen {
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                        line-height: 18px;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 39px;
+                    text-align: center;
+                    margin-bottom: 12px;
+                    text-transform: uppercase;
+
+                    @include smallScreen {
+                        line-height: 28px;
+                        font-size: 24px;
+                        margin-bottom: 8px;
+                    }
+                }
+
+                a {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    text-align: center;
+
+                    @include smallScreen {
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+                }
+            }
+        }
+
+        .list {
+            margin-top: 32px;
+            flex: 1;
+
+            @include smallScreen {
+                width: 100%;
+                margin-top: 16px;
+            }
+
+            .title {
+                margin-bottom: 32px;
+                text-align: center;
+
+                @include smallScreen {
+                    margin-bottom: 16px;
+                }
+
+                h3 {
+                    padding-top: 5px;
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    letter-spacing: 0.0015em;
+                    text-align: center;
+                    margin: 0;
+                    text-transform: uppercase;
+                }
+            }
+
+            .list-box {
+                display: flex;
+                margin: 0 -8px;
+                margin-bottom: 32px;
+                flex-wrap: wrap;
+
+                @include smallScreen {
+                    margin-bottom: 24px;
+                }
+
+                .product-col {
+                    width: calc(100%/4);
+
+                    @include smallScreen {
+                        width: calc(100% / 2);
+                    }
+                }
+            }
+
+            .btn {
+                text-align: center;
+
+                .view-more {
+                    width: 240px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    padding: 12px;
+                    color: #E95056;
+                    border: 1px solid #E95056;
+                    border-radius: 48px;
+                    display: inline-block;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        background-color: #E95056;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

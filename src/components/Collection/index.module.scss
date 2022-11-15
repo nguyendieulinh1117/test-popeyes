@@ -1,0 +1,37 @@
+@import "@assets/scss/global";
+
+.collection {
+    position: relative;
+
+    .box {
+        @include smallScreen{
+            margin: 0 -8px;
+        }
+        .title {
+            margin-bottom: 40px;
+            margin-top: 32px;
+
+            h3 {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 28px;
+                text-align: center;
+                margin: 0;
+                text-transform: uppercase;
+            }
+        }
+
+        .show {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .product-col {
+                width: calc(100% / 5);
+                @include smallScreen{
+                    width:  50%;
+                }
+            }
+        }
+    }
+}

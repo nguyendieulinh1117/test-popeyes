@@ -1,0 +1,123 @@
+@import "@assets/scss/global";
+
+.swiper-slider {
+
+    .swiper-item {
+        width: 100%;
+        cursor: pointer;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .my-swiper {
+        &:hover {
+
+            [class~="swiper-button-prev"],
+            [class~="swiper-button-next"] {
+                display: flex;
+            }
+        }
+
+        [class~="swiper-button-prev"],
+        [class~="swiper-button-next"] {
+            background: rgb(242 242 242 / 50%);
+            width: 36px;
+            height: 60px;
+            display: none;
+
+            @include smallScreen {
+                display: flex;
+                width: 26px;
+                height: 40px;
+            }
+
+            &:after {
+                font-size: 24px;
+                color: rgb(84 84 84 / 50%);
+
+                @include smallScreen {
+                    font-size: 18px;
+                }
+            }
+
+            &:hover {
+                background: #C22026;
+
+                &:after {
+                    color: #fff;
+                }
+            }
+        }
+
+        [class~="swiper-button-prev"] {
+            border-radius: 0px 8px 8px 0px;
+            left: 0;
+
+            @include smallScreen {
+                border-radius: 0px 4px 4px 0px;
+            }
+        }
+
+        [class~="swiper-button-next"] {
+            border-radius: 8px 0px 0px 8px;
+            right: 0;
+
+            @include smallScreen {
+                border-radius: 4px 0px 0px 4px;
+            }
+        }
+
+        [class~="swiper-pagination"] {
+            span {
+                width: 6px;
+                height: 6px;
+                background: #fff;
+                opacity: 1;
+
+                &[class~="swiper-pagination-bullet-active"] {
+                    background: #E95056;
+                }
+            }
+        }
+    }
+
+    .banner-small {
+        margin-top: 16px;
+
+        .box {
+            display: flex;
+            align-items: center;
+            margin: 0 -8px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            @include smallScreen {
+                margin-bottom: -16px;
+            }
+
+            .banner-small-col {
+                width: calc(100% / 4);
+                padding: 0 8px;
+                cursor: pointer;
+                
+
+                @include smallScreen {
+                    width: calc(100% / 2);
+                    margin-bottom: 16px;
+                }
+
+                figure {
+                    width: 100%;
+
+                    img {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
+}

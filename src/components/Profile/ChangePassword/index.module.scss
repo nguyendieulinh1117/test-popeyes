@@ -1,0 +1,64 @@
+@import "@assets/scss/global.scss";
+
+.change-password{
+    background-color: white;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    flex-wrap: wrap;
+
+    @include smallScreen{
+        padding: 0;
+    }
+
+    .center-form{
+        width: 90%;
+        max-width: 420px;
+        padding: 32px 16px;
+
+        @include smallScreen{
+            width: 100%;
+        }
+
+        .title-form{
+            width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 24px;
+            position: relative;
+
+            .return-btn{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                cursor: pointer;
+                
+                svg{
+                    width: 17px;
+                }
+            }
+        }
+
+        form{
+            margin-top: 24px;
+            @include smallScreen{
+                margin-top: 16px;
+            }
+        }
+
+        .btn-submit{
+            margin-top: 24px;
+            width: 100%;
+        }
+
+        .direct-input{
+            margin-top: 1rem;
+
+            input{
+                cursor: pointer;
+            }
+        }
+    }
+}

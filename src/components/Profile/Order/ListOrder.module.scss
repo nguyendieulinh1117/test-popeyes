@@ -1,0 +1,12 @@
+@import "@assets/scss/global.scss";
+
+.list-order {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include smallScreen {
+        padding: 0 16px;
+    }
+}

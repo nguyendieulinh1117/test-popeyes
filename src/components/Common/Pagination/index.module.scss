@@ -1,0 +1,48 @@
+@import "@assets/scss/global";
+
+.pagination{
+    display: flex;
+    gap: 8px;
+    width: fit-content;
+    padding: 0;
+
+    li{
+        list-style-type: none;
+        max-width: 40px;
+        max-height: 40px;
+        min-width: 25px;
+        min-height: 25px;
+        width: 5vw;
+        height: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #DC3A35;
+        color: #DC3A35;
+        font-size: 16px;
+        cursor: pointer;
+
+        &.disable{
+            background-color: #F2F2F2;
+            border: 1px solid #F2F2F2;
+            pointer-events: none;
+            
+            svg{
+                path{
+                    fill: white;
+                }
+            }
+        }
+
+        &.active{
+            background-color: #DC3A35;
+            color: white;
+            pointer-events: none;
+        }
+
+        &:hover{
+            background-color: #F2F2F2;
+            border: 1px solid #F2F2F2;
+        }
+    }
+}

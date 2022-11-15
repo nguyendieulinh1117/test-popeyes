@@ -1,0 +1,99 @@
+@import "@assets/scss/global.scss";
+
+.info{
+    background-color: white;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    flex-wrap: wrap;
+
+    @include smallScreen{
+        padding: 0;
+    }
+
+    .center-form{
+        width: 90%;
+        max-width: 420px;
+        padding: 32px 16px;
+
+        @include smallScreen{
+            width: 100%;
+            padding: 0 16px;
+        }
+
+        .title-form{
+            width: 100%;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 24px;
+            position: relative;
+
+            @include smallScreen{
+                margin-bottom: 0;
+            }
+
+            .return-btn{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                cursor: pointer;
+                
+                svg{
+                    width: 17px;
+                }
+            }
+        }
+
+        form{
+            @include smallScreen{
+                margin-top: 16px;
+            }
+        }
+
+        .btn-submit{
+            margin-top: 24px;
+            width: 100%;
+        }
+
+        .direct-input{
+            margin-top: calc(1rem + 22px);
+            cursor: pointer;
+            position: relative;
+
+            input{
+                pointer-events: none;
+            }
+
+            label{
+                position: absolute;
+                bottom: 100%;
+                pointer-events: none;
+            }
+        }
+
+        input{
+            border-radius: 8px !important;
+        }
+    }
+
+    .noti{
+        position: fixed;
+        bottom: 50%;
+        right: 2%;
+        button{
+            padding: 12px;
+            margin-left: 12px;
+        }
+
+        .state{
+            background-color: lightgreen;
+        }
+
+        .state-fail{
+            background-color: lightcoral;
+        }
+    }
+}

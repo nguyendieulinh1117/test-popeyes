@@ -1,0 +1,51 @@
+@import "@assets/scss/global.scss";
+
+.product-detail {
+    position: relative;
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 16px;
+        margin-bottom: 16px;
+
+        @include smallScreen {
+            flex-direction: column;
+            margin: 0 -16px;
+            overflow-x: hidden;
+        }
+
+        .gallery {
+            width: calc(425 / 1300 * 100%);
+
+            @include smallScreen {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+        }
+
+        .info {
+            padding: 0 16px;
+            flex-grow: 1;
+            overflow: hidden;
+
+            @include smallScreen {
+                padding: 0;
+                width: 100%;
+            }
+        }
+
+        .policy {
+            flex-shrink: 0;
+            width: 225px;
+        }
+    }
+
+    .detail {
+        margin-bottom: 16px;
+    }
+
+    .related {
+    }
+}

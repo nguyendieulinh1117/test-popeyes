@@ -1,0 +1,12 @@
+@import "@assets/scss/global";
+.cartMain {
+    display: flex;
+    gap: 14px;
+    position: relative;
+    @include smallScreen {
+        // position: unset;
+        // height: calc(100vh - 124px);
+        // padding-bottom: 192px;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,137 @@
+@import "@assets/scss/global";
+.footer {
+    position: relative;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .box {
+        padding: 40px 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include smallScreen{
+            flex-wrap: wrap;
+            padding: 16px 0;
+        }
+        .company {
+            display: flex;
+            max-width: 610px;
+            @include smallScreen{
+               width: 100%;
+               max-width: initial;
+               flex-direction: column;
+               margin-bottom: 24px;
+            }
+            .logo {
+                margin-right: 24px;
+                cursor: pointer;
+                @include smallScreen{
+                    margin-right: 0;
+                }
+            }
+
+            .info {
+                ul {
+                    li {
+
+                        &:first-child {
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 20px;
+                            color: #292929;
+                        }
+
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        color: #545454;
+
+                        span {
+                            color: #5C45ED;
+                            ;
+                        }
+                    }
+                }
+            }
+        }
+
+        .brand {
+            width: 170px;
+            @include smallScreen{
+                width:  50%;
+            }
+
+            ul {
+                li {
+                    margin-bottom: 4px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    cursor: pointer;
+                    color: #292929;
+
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+        .title {
+            margin-bottom: 8px;
+
+            h3 {
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .title-custom {
+            margin-bottom: 8px;
+             @include largeScreen{
+                margin-top: 16px;
+            }
+            
+            h3 {
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .social {
+            @include smallScreen{
+                width:  100%;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 16px;
+            }
+            ul {
+                display: flex;
+                align-items: center;
+
+                div {
+                  
+                    line-height: 0;
+                    cursor: pointer;
+
+                    &:not(:last-child) {
+                        margin-right: 16px;
+                    }
+                }
+            }
+        }
+
+    }
+}

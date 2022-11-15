@@ -1,0 +1,104 @@
+@import "@assets/scss/global";
+.listCart {
+    padding: 20px 16px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 882px;
+    border-radius: 4px;
+    @include smallScreen {
+        max-width: unset;
+        padding: 0;
+        border-radius: 0;
+    }
+    .title-cart {
+        margin: 0;
+        font-family: "Archivo";
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+        letter-spacing: 0.0015em;
+        text-transform: uppercase;
+        color: #292929;
+        padding-bottom: 8px;
+        @include smallScreen {
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    .title-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Archivo";
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #292929;
+        @include smallScreen {
+            display: none;
+        }
+        .prod-cart {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: 10px 0px;
+            gap: 10px;
+        }
+        .figure-cart {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0;
+            width: 55%;
+            max-width: 425px;
+
+            .figure-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 10px;
+                gap: 10px;
+            }
+        }
+    }
+    .list-main {
+        padding-top: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        width: 100%;
+
+        @include smallScreen {
+            padding-top: 16px;
+
+            // overflow-y: scroll;
+            // height: calc(100vh - 352px);
+            // /* width */
+            // &::-webkit-scrollbar {
+            //     width: 4px;
+            // }
+
+            // /* Track */
+
+            // &::-webkit-scrollbar-track {
+            //     background: transparent;
+            // }
+            // &::-webkit-scrollbar-track:hover {
+            //     background: #fff;
+            // }
+            // /* Handle */
+            // &::-webkit-scrollbar-thumb {
+            //     background: #bfbfbf;
+            //     border-radius: 4px;
+            // }
+
+            // /* Handle on hover */
+            // &::-webkit-scrollbar-thumb:hover {
+            //     background: #545454;
+            // }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    gap: 36px;
+
+    .content {
+        font-family: "Archivo";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #292929;
+        margin: 0;
+    }
+    button {
+        margin-top: 8px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #dc3a35;
+        padding: 16px 40px;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,4 @@
+NEXT_PUBLIC_VME_API_GATEWAY_URL=http://api-stg.vmstyle.vn/
+PORT=3000
+NEXT_PUBLIC_SHA_KEY=sha256-/jdKJYa2+VlTrKrCYdWehjtJtbNUsOd2hQ912vtaqGU=
+NEXT_PUBLIC_URL=http://vmstylevn.api.useinsider.com

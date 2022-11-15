@@ -1,0 +1,99 @@
+.quantity-block {
+    position: relative;
+    padding: 20px 0;
+
+    .quantity {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+        border: 1px solid #DFDFDF;
+        border-radius: 32px;
+        overflow: hidden;
+
+        &.disable-control {
+            cursor: not-allowed;
+
+            button,
+            input {
+                cursor: not-allowed;
+            }
+        }
+
+        &.over-limit {
+            border-color: #F33060;
+
+            input{
+                border-color: #F33060;
+            }
+        }
+
+        .disable-button {
+            cursor: not-allowed;
+            background-color: #f5f6f7;
+            opacity: 0.3;
+        }
+
+        .disable-plus {
+            cursor: not-allowed;
+        }
+
+        button {
+            border: 0;
+            background-color: #F5F6F7;
+            color: #112950;
+            cursor: pointer;
+            font-size: 22px;
+            width: 36px;
+            padding: 0;
+            position: relative;
+            line-height: 0;
+            flex-grow: 1;
+            height: 44px;
+
+            &:nth-of-type(1) {
+                text-align: right;
+            }
+
+            &:nth-of-type(2) {
+                text-align: left;
+            }
+
+            &:focus {
+                outline: none;
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+        input {
+            border: none;
+            width: 48px;
+            text-align: center;
+            color: #292929;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 17px;
+            height: 44px;
+            padding: 0;
+            border-left: 1px solid #DFDFDF;
+            border-right: 1px solid #DFDFDF;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+    }
+
+    .expand {
+        font-size: 12px;
+        line-height: 17px;
+        color: #F33060;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: none;
+    }
+}

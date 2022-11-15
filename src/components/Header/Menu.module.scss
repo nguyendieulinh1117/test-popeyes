@@ -1,0 +1,197 @@
+@import "@assets/scss/global";
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    > li {
+        padding: 0 24px 8px;
+
+        @include largeScreen {
+            &:hover {
+                .menu-box {
+                    border-color: #dc3a35;
+                    color: #dc3a35;
+
+                    svg {
+                        path {
+                            fill: #dc3a35;
+                        }
+                    }
+
+                    .menu-list-wrap {
+                        display: block;
+                    }
+                }
+            }
+
+            &:last-child:hover {
+                .menu-list {
+                    li {
+                        &.children {
+                            .sub-menu-list {
+                                left: unset;
+                                right: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .menu-box {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px;
+            border-bottom: 1px solid #0000;
+
+            span {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: center;
+                text-transform: uppercase;
+            }
+
+            svg {
+                margin-left: 4px;
+            }
+            .menu-list-wrap {
+                position: absolute;
+                top: calc(100% - 25px);
+                z-index: 2;
+                left: 0;
+                right: 0;
+                display: none;
+                padding-top: 25px;
+                background: transparent;
+            }
+            .menu-list {
+                padding: 8px 32px;
+                background: #fff;
+                width: 100%;
+                box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+                flex-wrap: wrap;
+                height: 350px;
+                overflow: auto;
+                display: flex;
+
+                > li {
+                    width: calc(100% / 6);
+
+                    > a {
+                        font-weight: 700 !important;
+                        padding: 8px;
+                        display: block;
+                    }
+                }
+
+                li {
+                    &:hover {
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    a {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        color: #292929;
+                    }
+
+                    &.children {
+                        position: relative;
+
+                        a {
+                            display: flex;
+                            justify-content: space-between;
+
+                            svg {
+                                path {
+                                    fill: #292929;
+                                }
+                            }
+                        }
+
+                        .sub-menu-list {
+                            top: 0;
+                            left: 100%;
+                            background: #ffffff;
+                            padding: 0;
+                            width: 150px;
+                            z-index: 10;
+
+                            > li {
+                                > a {
+                                    padding: 4px 8px;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        .sub-menu-list {
+                            display: block;
+
+                            li {
+                                a {
+                                    text-decoration: unset;
+                                }
+
+                                &:hover {
+                                    a {
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.children-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    overflow: hidden;
+
+    .parent-name {
+        display: flex;
+        align-items: center;
+        padding: 15px 4px;
+        border-bottom: 1px #f2f2f2 solid;
+        text-transform: uppercase;
+
+        span {
+            margin-left: 20px;
+            font-size: 14px;
+        }
+    }
+
+    .list-children {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+
+        li {
+            padding: 15px 32px;
+            display: flex;
+            justify-content: space-between;
+
+            span {
+                &.active {
+                    text-decoration: underline;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}

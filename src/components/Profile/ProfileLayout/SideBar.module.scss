@@ -1,0 +1,102 @@
+@import "@assets/scss/global.scss";
+
+.side-bar{
+    min-width: 300px;
+    max-width: 300px;
+    background-color: white;
+    padding-bottom: 32px;
+    max-height: 525px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include smallScreen{
+        width: 100%;
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    .body{
+        width: 100%;
+    }
+
+    .avatar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 32px 19px;
+        text-align: center;
+
+        .image{
+            width: 92px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 12px;
+
+            img{
+                width: 100%;
+            }
+        }
+        span{
+            font-weight: 700;
+        }
+    }
+
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 14px 19px;
+            cursor: pointer;
+
+            span{
+                margin-left: 12px;
+            }
+
+            svg{
+                width: 24px;
+
+                path{
+                    stroke: #292929;
+                }
+
+                &.icon-check{
+                    path{
+                        fill: #292929;
+                        stroke: none;
+                    }
+                }
+            }
+
+            &.active{
+                background-color: #FFF4F4;
+                color: #DC3A35;
+
+                svg{
+                    path{
+                        stroke: #DC3A35;
+                    }
+
+                    &.icon-check{
+                        path{
+                            fill: #DC3A35;
+                            stroke: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btn-logout{
+        width: calc(100% - 32px);
+        margin: 32px auto 0;
+        display: block;
+    }
+}

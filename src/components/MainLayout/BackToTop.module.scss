@@ -1,0 +1,32 @@
+@import "@assets/scss/global";
+
+.scroll-to-top-wrapper {
+    display: none;
+    cursor: pointer;
+
+    @include smallScreen {
+        cursor: unset;
+    }
+
+    .scroll-to-top {
+        position: fixed;
+        bottom: 150px;
+        right: 32px;
+
+        @include smallScreen {
+            right: 16px;
+            bottom: 170px;
+        }
+
+        width: 44px;
+        height: 44px;
+        z-index: 100;
+        border-radius: 50%;
+        border: none;
+        background-color: #f2f6fe;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+}

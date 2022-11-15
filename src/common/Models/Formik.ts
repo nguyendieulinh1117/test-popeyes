@@ -1,0 +1,1 @@
+export type FormikInitType<T> = {} & T;

@@ -1,0 +1,173 @@
+.item {
+    width: max-content;
+    height: 74px;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    border: 1px solid #dfdfdf;
+    background-color: #ffffff;
+
+    .coupon-left {
+        min-width: 32px;
+        max-width: 32px;
+        position: relative;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+
+            line {
+                stroke-width: 2px;
+                stroke: #dfdfdf;
+                stroke-dasharray: 8 4;
+            }
+        }
+
+        .circle {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #dfdfdf;
+            border-radius: 50%;
+            position: relative;
+            &::before {
+                display: none;
+                position: absolute;
+                content: "";
+                width: 9.33px;
+                height: 9.33px;
+                background-color: #dc3a35;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            z-index: 1;
+            top: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #f5f6f7;
+            border-top: 1px solid #dfdfdf;
+            border-right: 1px solid #dfdfdf;
+            border-left: 1px solid #0000 !important;
+            border-bottom: 1px solid #0000 !important;
+            border-radius: 50%;
+            transform: translate(50%, -50%) rotate(135deg);
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            z-index: 1;
+            bottom: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #f5f6f7;
+            border-top: 1px solid #dfdfdf;
+            border-right: 1px solid #dfdfdf;
+            border-left: 1px solid #0000 !important;
+            border-bottom: 1px solid #0000 !important;
+            border-radius: 50%;
+            transform: translate(50%, 50%) rotate(-45deg);
+        }
+    }
+
+    &:hover {
+        border-color: #dc3a35;
+
+        .coupon-left {
+            svg {
+                line {
+                    stroke: #dc3a35;
+                }
+            }
+
+            &::before {
+                border-color: #dc3a35;
+            }
+            &::after {
+                border-color: #dc3a35;
+            }
+            .circle {
+                border-color: #dc3a35;
+            }
+        }
+    }
+
+    &.disable {
+        pointer-events: none;
+        border-color: #545454;
+        .coupon-left {
+            svg {
+                line {
+                    stroke: #545454;
+                }
+            }
+            &::before {
+                border-color: #545454;
+            }
+            &::after {
+                border-color: #545454;
+            }
+            .circle {
+                border-color: #dc3a35;
+                &::before {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .text {
+        padding: 12px;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        min-width: 172px;
+
+        .code {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 18px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            width: max-content;
+
+            span {
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 10px;
+                letter-spacing: 0.04em;
+                flex-shrink: 0;
+            }
+        }
+
+        p {
+            margin: 0;
+            max-width: 148px;
+            color: #8a8a8a;
+            font-size: 10px;
+            line-height: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    }
+}

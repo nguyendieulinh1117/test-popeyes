@@ -1,0 +1,97 @@
+.tab {
+    text-align: center;
+    margin-bottom: 12px;
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        text-align: center;
+        color: #BFBFBF;
+        border-bottom: 1px solid;
+
+        &.active {
+            color: #DC3A35;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        color: #000000;
+    }
+}
+
+.tab-custom {
+    text-align: center;
+    margin-bottom: 12px;
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        text-align: center;
+        color: #BFBFBF;
+
+        &.active {
+            color: #DC3A35;
+            font-size: 18px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        color: #000000;
+    }
+}
+
+.form {
+    >form {
+        >button {
+            margin-left: auto;
+            margin-top: 10px;
+            display: block;
+
+            p {
+                font-size: 10px;
+                font-weight: 400;
+                line-height: 10px;
+                color: #DC3A35;
+                text-align: right;
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+        .btn {
+            margin-top: 16px;
+
+            button {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+.modal-body {
+    padding-top: 0;
+}
+
+.modal-header {
+    padding-bottom: 0;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+
+    button {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+}

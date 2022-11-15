@@ -1,0 +1,53 @@
+@import "@assets/scss/global";
+.empty {
+    background-color: #fff;
+    padding: 16px 16px 252px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include smallScreen {
+        padding: 0;
+        height: calc(100vh - 124px);
+        justify-content: flex-start;
+    }
+    &-title {
+        font-family: "Archivo";
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 28px;
+
+        letter-spacing: 0.0015em;
+        text-transform: uppercase;
+
+        color: #292929;
+        margin-bottom: 14px;
+        @include smallScreen {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 12px;
+        }
+    }
+    &-text {
+        font-family: "Archivo";
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #292929;
+        margin-bottom: 24px;
+        @include smallScreen {
+            margin-bottom: 0;
+        }
+    }
+    &-btn {
+        padding: 14px 40px;
+        @include smallScreen {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 32px;
+            width: calc(100% - 32px);
+        }
+    }
+}

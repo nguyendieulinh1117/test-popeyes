@@ -1,0 +1,238 @@
+@import "@assets/scss/global.scss";
+
+.detail-order {
+    background-color: white;
+    flex-grow: 1;
+    padding: 16px;
+    font-size: 14px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 12px;
+
+        @include smallScreen {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 500;
+
+            @include smallScreen {
+                width: 100%;
+                text-align: center;
+                position: relative;
+
+                .return-btn {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    cursor: pointer;
+
+                    svg {
+                        width: 17px;
+                    }
+                }
+            }
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+
+            @include smallScreen {
+                align-self: flex-start;
+            }
+
+            .code {
+                position: relative;
+                margin-right: 8px;
+                padding-right: 8px;
+                color: #8a8a8a;
+
+                &::after {
+                    position: absolute;
+                    width: 1px;
+                    height: 12px;
+                    content: "";
+                    background-color: #8a8a8a;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+
+            .status {
+                flex-shrink: 0;
+                color: #dc3a35;
+            }
+        }
+    }
+
+    .body {
+        .information {
+            width: 100%;
+            display: flex;
+            margin-bottom: 12px;
+
+            @include smallScreen {
+                flex-direction: column;
+            }
+
+            .general {
+                max-width: 260px;
+                padding: 16px 36px 16px 0;
+                border-right: 1px solid #f2f2f2;
+
+                &.tracking {
+                    max-width: 500px;
+                }
+
+                @include smallScreen {
+                    border-right: none;
+                    max-width: 100%;
+                }
+
+                .item {
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    @include smallScreen {
+                        margin-bottom: 0;
+                    }
+
+                    .sub-title {
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin-bottom: 4px;
+                    }
+
+                    p {
+                        display: flex;
+                        gap: 8px;
+                        color: #8a8a8a;
+                        margin: 4px 0;
+                        line-height: 18px;
+                        align-items: center;
+                        img {
+                            width: 24px;
+                        }
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+
+            .timeline-list {
+                flex-grow: 1;
+                padding: 16px 36px;
+                // max-height: 322px;
+                overflow: auto;
+
+                @include smallScreen {
+                    padding: 16px;
+                }
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        margin-top: 12px;
+
+        &.tracking {
+            justify-content: flex-end;
+        }
+
+        @include smallScreen {
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .return {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            color: #dc3a35;
+            cursor: pointer;
+
+            svg {
+                path {
+                    fill: #dc3a35;
+                }
+            }
+
+            @include smallScreen {
+                border: 1px solid #dc3a35;
+                padding: 15px;
+                background-color: #dc3a35;
+                color: white;
+                justify-content: center;
+                border-radius: 48px;
+            }
+        }
+
+        .cancle-order {
+            border: 1px solid #bfbfbf;
+            padding: 11px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+
+            @include smallScreen {
+                border: 1px solid #dc3a35;
+                border-radius: 48px;
+                color: #dc3a35;
+                padding: 15px;
+            }
+        }
+    }
+}
+.modal-body {
+    padding-top: 0;
+    padding-bottom: 4px;
+    text-align: center;
+    .modal-title1 {
+        font-weight: 700;
+    }
+}
+
+.modal-header {
+    padding-bottom: 0;
+}
+.modal-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #000000;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    button {
+        margin-top: 16px;
+        margin-bottom: 16px;
+        align-self: center;
+        width: max-content;
+    }
+}
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    button {
+        margin: 0 !important;
+    }
+}

@@ -1,0 +1,88 @@
+@import "global";
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Archivo;
+  width: 100%;
+  color: #292929;
+}
+
+button {
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+  padding: 0;
+  color: inherit;
+
+  &:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+
+  * {
+    line-height: initial;
+  }
+}
+
+input {
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  
+  @include smallScreen {
+    width: 100%;
+  }
+
+  @include maxLargeScreen {
+    width: 91%;
+  }
+
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.nonContainer {
+  position: relative;
+}
+
+.poa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms !important;
+}
+
+.ReactModalPortal {
+  position: relative;
+  z-index: 99;
+}
+

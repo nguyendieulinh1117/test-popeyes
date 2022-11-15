@@ -1,0 +1,51 @@
+@import "@assets/scss/global.scss";
+
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-grow: 1;
+
+    .box {
+        width: 100%;
+        text-align: center;
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        figure {
+            margin-bottom: 20px;
+
+            img {
+                margin-bottom: 32px;
+
+                @include smallScreen {
+                    max-width: 200px;
+                }
+            }
+
+            figcaption {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                color: #292929;
+
+                @include smallScreen {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+
+        }
+        button{
+            @include smallScreen{
+                width:  100%;
+                margin-top: 100px;
+            }
+        }
+    }
+}

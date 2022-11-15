@@ -1,0 +1,271 @@
+@import "@assets/scss/global.scss";
+
+.filter {
+    background-color: #fff;
+    padding: 32px 16px;
+
+    @include smallScreen {
+        padding: 16px 0;
+        height: 100%;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-title {
+        @include smallScreen {
+            padding-bottom: 16px;
+            border-bottom: 1px solid #F2F2F2;
+
+            h3 {
+                margin: 0;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 17px;
+                color: #292929;
+                text-align: center;
+            }
+        }
+    }
+
+    .box {
+        @include smallScreen {
+            overflow: auto;
+            padding: 0 16px;
+            height: calc(100% - 50px);
+
+            form {
+                margin-bottom: 16px;
+            }
+        }
+
+        .title {
+            margin-bottom: 16px;
+            border-bottom: 1px solid #F5F6F7;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+
+            >h3 {
+                font-size: 32px;
+                font-weight: 300;
+                line-height: 35px;
+                color: #292929;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                li {
+
+                    button {
+                        display: flex;
+                        justify-content: space-between;
+                        cursor: pointer;
+                        width: 100%;
+
+                        h3 {
+                            margin: 0;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 24px;
+                            color: #292929;
+                            text-align: start;
+                            white-space: normal;
+                        }
+
+                        svg {
+                            transform: rotate(-90deg);
+
+                            path {
+                                fill: #8A8A8A
+                            }
+                        }
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+
+
+
+
+                    }
+
+                    &.active {
+                        button {
+                            h3 {
+                                font-weight: bold;
+                                text-decoration: underline;
+                            }
+                        }
+
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+        }
+
+
+        .result {
+            margin-bottom: 20px;
+
+            .head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 13px 0;
+
+                label {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    color: #292929;
+                }
+
+                button {
+                    span {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        color: #DC3A35;
+                        display: inline-block;
+                    }
+
+                    svg {
+                        transform: rotate(0deg);
+                        transition: all 0.5s;
+                    }
+                }
+            }
+
+            .body {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 0 -4px;
+
+                li {
+                    margin: 4px;
+                    padding: 4px;
+                    background: #8A8A8A;
+                    border-radius: 24px;
+                    display: flex;
+                    align-items: center;
+                    min-width:  50px;
+
+                    button {
+                        margin-right: 4px;
+                        line-height: 0;
+
+                        &:hover {
+                            svg {
+                                path {
+                                    fill: #DC3A35
+                                }
+                            }
+                        }
+                    }
+
+                    span {
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        color: #fff;
+                        padding-right: 4px;
+                        flex-grow: 1;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .type {}
+
+        .color {
+            ul {
+                li {
+                    label {
+                        p {
+                            padding: 8px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+            }
+        }
+
+        .size {
+            ul {
+                gap: 0;
+                margin: 0 -4px;
+
+                li {
+                    width: calc(100% / 4);
+                    padding: 4px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .material {
+            ul {
+                gap: 0;
+                margin: 0 -4px;
+
+                li {
+                    width: calc(100% / 3);
+                    padding: 4px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .price {
+            .price-item {
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        .mobile-btn {
+            @include smallScreen {
+                display: flex;
+                align-items: center;
+                padding-top: 16px;
+                border-top: 1px solid #F2F2F2;
+                margin-top: 16px;
+                
+
+                button {
+                    margin-left: 8px;
+                    padding: 9px 12px;
+                    border-radius: 8px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 14px;
+                    text-transform: capitalize;
+                }
+
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    color: #545454;
+                    margin: 0;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+
+}

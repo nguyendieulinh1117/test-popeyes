@@ -1,0 +1,12 @@
+{
+    "apps": [
+        {
+            "name": "vme_web",
+            "script": "C:\\Program Files (x86)\\Yarn\\bin\\yarn.js",
+            "args": "start:staging",
+            "watch": false,
+            "instances": 1,
+            "exec_mode": "cluster"
+        }
+    ]
+}

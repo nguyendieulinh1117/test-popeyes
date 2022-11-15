@@ -1,0 +1,24 @@
+//$small-screen: 992
+@mixin smallScreen {
+    @media screen and (max-width: #{$small-screen}) {
+        @content;
+    }
+}
+
+@mixin mediumScreen {
+    @media screen and (max-width: #{$medium-screen}) {
+        @content;
+    }
+}
+
+@mixin largeScreen {
+    @media screen and (min-width: #{$large-screen}) {
+        @content;
+    }
+}
+
+@mixin maxLargeScreen {
+    @media screen and (min-width: #{$max-large-screen }) {
+        @content;
+    }
+}

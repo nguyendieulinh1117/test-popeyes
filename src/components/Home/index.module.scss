@@ -1,0 +1,70 @@
+@import "@assets/scss/global.scss";
+
+.home {
+    position: relative;
+
+    .product-hot {
+        flex-direction: row-reverse;
+        @include smallScreen {
+            > div:first-child {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
+
+.modal {
+    position: relative;
+    overflow: unset !important;
+    overflow-y: hidden;
+
+    &-header {
+        position: absolute;
+        padding: 8px;
+        right: -48px;
+        border-radius: 50%;
+        background: #ffffff;
+
+        button {
+            margin: 0 !important;
+            padding: 4px !important;
+            svg {
+                width: 16px !important;
+                height: 16px !important;
+            }
+        }
+
+        @include smallScreen {
+            right: -8px;
+            top: -20px;
+        }
+    }
+
+    &-body {
+        padding: 0;
+        border-radius: 8px;
+    }
+
+    &-content {
+        display: flex;
+        cursor: pointer;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    @mixin modal-center {
+        max-width: 700px;
+        width: calc(100% - 32px);
+        border-radius: 8px;
+        border-top-right-radius: 12px;
+        margin-bottom: auto;
+        max-height: calc(100% - 64px);
+    }
+
+    @include largeScreen {
+        @include modal-center;
+    }
+}

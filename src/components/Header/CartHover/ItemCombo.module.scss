@@ -1,0 +1,181 @@
+.item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 16px 8px;
+    gap: 12px;
+    border-bottom: 1px solid #dfdfdf;
+
+    &-wrap {
+        display: flex;
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .combo-bonus {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #dc3a35;
+        width: 100%;
+        background: #fff4f4;
+        padding: 8px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &-image {
+        max-width: 110px;
+        img {
+            max-width: 100%;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+            path {
+                stroke: unset !important;
+            }
+        }
+    }
+    .total {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0px;
+        gap: 4px;
+
+        p.total-content {
+            margin: 0 !important;
+            font-size: 14px !important;
+            line-height: 18px !important;
+            color: #292929 !important;
+        }
+        span {
+            font-family: "Archivo";
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 18px;
+            color: #dc3a35;
+        }
+    }
+    .delete {
+        cursor: pointer;
+        svg {
+            path {
+                stroke: unset !important;
+            }
+        }
+        &:hover {
+            svg {
+                path {
+                    fill: #dc3a35;
+                }
+            }
+        }
+    }
+    &-info {
+        width: calc(100% - 110px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        .info-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .property {
+                width: calc(100% - 24px);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0px;
+                gap: 4px;
+                font-family: "Archivo";
+                font-size: 14px;
+                line-height: 18px;
+                .name {
+                    text-align: left;
+                    font-weight: 400;
+                    color: #292929;
+                    max-height: 36px;
+                    overflow: hidden;
+                    width: 100%;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    &:hover {
+                        text-decoration: underline;
+                        color: #dc3a35;
+                    }
+                }
+                .price {
+                    display: flex;
+                    align-items: center;
+                    padding: 0px;
+                    gap: 4px;
+                    font-weight: 600;
+                    color: #545454;
+                    .discount {
+                        font-weight: 400;
+                        font-size: 13px;
+                        line-height: 17px;
+                        text-align: right;
+                        text-decoration-line: line-through;
+                        color: #8a8a8a;
+                    }
+                }
+                .size {
+                    padding: 2px 8px;
+                    background: #f2f2f2;
+                    border-radius: 24px;
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: #292929;
+                }
+                .out-of-stock{
+                    background: #FFF4F4;
+                    padding: 4px 10px;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #DC3A35;
+                }
+            }
+        }
+        .figure {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px;
+            gap: 5px;
+            .quantity-parent {
+                padding: 0px;
+                border-radius: 32px;
+                .quantity {
+                    width: 100px;
+                    button {
+                        width: 32px;
+                        height: 32px;
+                        cursor: not-allowed;
+                        opacity: 0.3;
+                        svg {
+                            width: 32px;
+                            height: 32px;
+                        }
+                    }
+                    input {
+                        width: 36px;
+                        height: 32px;
+                        padding-top: 3px;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

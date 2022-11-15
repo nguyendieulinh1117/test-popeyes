@@ -1,0 +1,20 @@
+.notification{
+    width: 100%;
+    padding: 11px 16px;
+    background-color: #E2EFDA;
+    color: #292929;
+    font-size: 14px;
+    border-radius: 4px;
+    display: none;
+    margin-top: 16px;
+    height: fit-content;
+    
+
+    &.active{
+        display: block !important;
+    }
+
+    &.error{
+        background-color: #FFF4F4;
+    }
+}

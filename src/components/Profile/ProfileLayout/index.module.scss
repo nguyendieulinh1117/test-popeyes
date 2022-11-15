@@ -1,0 +1,16 @@
+@import "@assets/scss/global.scss";
+
+.profile {
+    padding: 16px 49px;
+
+    @include smallScreen{
+        background-color: white;
+        padding: 16px 0;
+        margin: -16px 0;
+    }
+
+    .layout{
+        display: flex;
+        column-gap: 20px;
+    }
+}

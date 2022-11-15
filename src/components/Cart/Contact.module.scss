@@ -1,0 +1,25 @@
+@import "@assets/scss/global";
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 6px;
+    @include smallScreen {
+        display: none;
+    }
+    span {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        letter-spacing: 0.04em;
+        color: #8a8a8a;
+        &:not(:last-child) {
+            padding-right: 6px;
+            border-right: 1px solid #bfbfbf;
+        }
+        a {
+            color: #dc3a35;
+        }
+    }
+}

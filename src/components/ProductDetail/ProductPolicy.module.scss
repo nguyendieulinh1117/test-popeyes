@@ -1,0 +1,77 @@
+@import "@assets/scss/global.scss";
+
+.product-policy {
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    margin-top: 45px;
+
+    .policy-item {
+        padding: 16px 20px;
+        display: flex;
+        @include smallScreen {
+            svg {
+                width: 20.53px;
+                height: 20.53px;
+            }
+            &:nth-child(2) {
+                svg {
+                    width: 20px;
+                    height: 13.64px;
+                }
+            }
+            &:nth-child(3) {
+                svg {
+                    width: 18.12px;
+                    height: 20.22px;
+                }
+            }
+            &:nth-child(4) {
+                svg {
+                    width: 14.73px;
+                    height: 16.07px;
+                }
+            }
+        }
+        figure {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+            margin-right: 16px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #fff4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg,
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        figcaption {
+            h3 {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 18px;
+                margin-bottom: 10px;
+                color: #292929;
+            }
+
+            p {
+                margin: 0;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+                color: #292929;
+
+                span {
+                    color: #dc3a35;
+                }
+            }
+        }
+    }
+}

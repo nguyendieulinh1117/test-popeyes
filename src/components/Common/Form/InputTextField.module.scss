@@ -1,0 +1,102 @@
+// @import "@assets/scss/global.scss";
+
+.input-text-field {
+    &:not(:first-child) {
+        margin-top: 1rem;
+    }
+
+    label {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-bottom: 4px;
+        display: block;
+        span {
+            margin-left: 3px;
+            color: #f33060;
+        }
+    }
+
+    .input-group {
+        position: relative;
+
+        textarea,
+        input {
+            outline: none;
+            box-sizing: border-box;
+            background-color: transparent;
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            width: 100%;
+            font-family: inherit;
+            border: 1px solid #DFDFDF;
+            border-radius: 8px;
+            text-indent: 12px;
+            color: #000;
+
+            &.has-icon-left {
+                padding-left: 28px;
+            }
+
+            &.has-icon-right {
+                padding-right: 28px;
+            }
+
+            &:focus {
+                border-color: #454DE0;
+            }
+
+            &::placeholder,
+            &::-webkit-input-placeholder,
+            &:-ms-input-placeholder {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+                color: #8A8A8A;
+                font-family: inherit;
+            }
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .icon-left {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 4px;
+            width: 20px;
+            display: flex;
+        }
+
+        .icon-right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 4px;
+            width: 20px;
+            display: flex;
+        }
+    }
+
+    &.error {
+        label {
+            color: #f33060;
+        }
+
+        textarea,
+        input {
+            border-color: #f33060 !important;
+        }
+
+        .feedback {
+            color: #f33060;
+            font-size: 12px;
+            line-height: 18px;
+            margin-top: 2px;
+        }
+    }
+}

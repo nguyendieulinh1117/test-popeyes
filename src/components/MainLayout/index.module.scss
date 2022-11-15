@@ -1,0 +1,50 @@
+@import "@assets/scss/global";
+
+.main-layout {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    .footer,
+    .header {
+        position: relative;
+    }
+
+    .header {
+        &.scroll {
+            padding-top: 130px;
+
+            @include smallScreen {
+                padding-top: 108px;
+
+                [class~="Search_drop-down__Wp2hf"] {
+                    position: fixed;
+                    top: 60px;
+                    left: 0;
+                    right: 0;
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .body {
+        background-color: #f5f6f7;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 16px 0;
+    }
+
+    .plugins {
+        position: relative;
+
+        .back-to-top {
+            position: fixed;
+            bottom: 100px;
+            right: 32px;
+        }
+    }
+}

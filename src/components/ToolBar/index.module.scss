@@ -1,0 +1,101 @@
+@import "@assets/scss/global.scss";
+
+.tool-bar {
+    position: relative;
+    height: 74px;
+
+    .tool-fixed {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        border-top: 1px solid #F2F2F2;
+        border-radius: 16px 16px 0px 0px;
+        box-shadow: 0px -2px 5px #d9d9d9;
+        z-index: 20;
+
+        .box {
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                height: 74px;
+
+                li {
+                    flex: 1;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    position: relative;
+
+                    svg {
+                        margin-bottom: 8px;
+
+                        path {
+                            fill: #292929;
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 14px;
+                        color: #292929;
+                    }
+
+                    &:nth-child(3) {
+                        svg {
+                            path {
+                                stroke: #292929;
+                            }
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        svg {
+                            path {
+                                fill: #0000;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        svg {
+                            path {
+                                fill: #DC3A35;
+                            }
+                        }
+
+                        p {
+                            color: #DC3A35;
+                        }
+
+                        &:nth-child(3) {
+                            svg {
+                                path {
+                                    stroke: #DC3A35;
+                                }
+                            }
+                        }
+
+                        &:nth-child(4) {
+                            svg {
+                                path {
+                                    stroke: #DC3A35;
+                                    fill: #0000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,170 @@
+@import "@assets/scss/global.scss";
+
+.product-sale {
+    .slide {
+        margin-bottom: 16px;
+
+        .my-swiper {
+            &:hover {
+
+                [class~="swiper-button-prev"],
+                [class~="swiper-button-next"] {
+                    display: flex;
+                }
+            }
+
+            [class~="swiper-slide"] {
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            [class~="swiper-button-prev"],
+            [class~="swiper-button-next"] {
+                background: rgb(242 242 242 / 50%);
+                width: 36px;
+                height: 60px;
+                display: none;
+
+                @include smallScreen {
+                    display: flex;
+                    width: 26px;
+                    height: 40px;
+                }
+
+
+                &:after {
+                    font-size: 24px;
+                    color: rgb(84 84 84 / 50%);
+
+                    @include smallScreen {
+                        font-size: 18px;
+                    }
+                }
+
+                &:hover {
+                    background: #C22026;
+
+                    &:after {
+                        color: #fff;
+                    }
+                }
+            }
+
+            [class~="swiper-button-prev"] {
+                border-radius: 0px 8px 8px 0px;
+                left: 0;
+
+                @include smallScreen {
+                    border-radius: 0px 4px 4px 0px;
+                }
+            }
+
+            [class~="swiper-button-next"] {
+                border-radius: 8px 0px 0px 8px;
+                right: 0;
+
+                @include smallScreen {
+                    border-radius: 4px 0px 0px 4px;
+                }
+            }
+
+            [class~="swiper-pagination"] {
+                span {
+                    width: 6px;
+                    height: 6px;
+                    background: #fff;
+                    opacity: 1;
+
+                    &[class~="swiper-pagination-bullet-active"] {
+                        background: #E95056;
+                    }
+                }
+            }
+        }
+    }
+
+    .box {
+        background-color: #fff;
+        padding: 16px;
+
+        @include smallScreen {
+            margin: 0 -16px;
+        }
+
+        .title {
+            margin-top: 24px;
+            margin-bottom: 32px;
+            text-align: center;
+            color: #292929;
+
+            h3 {
+                margin: 0;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 28px;
+                margin-bottom: 24px;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include smallScreen {
+                    white-space: nowrap;
+                    overflow-x: auto;
+                    justify-content: center;
+                    margin: 0 -16px;
+                    padding: 0 16px;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                }
+                @media (max-width: 575px){
+                    justify-content: flex-start;
+                }
+
+                li {
+                    margin: 0 8px;
+
+                    &.active {
+                        button {
+                            background-color: #DC3A35;
+                            color: #fff;
+                        }
+                    }
+
+                    button {
+                        width: 124px;
+                    }
+                }
+            }
+        }
+
+        .show {
+            display: flex;
+            flex-wrap: wrap;
+            @include smallScreen{
+                margin-bottom: 32px;
+            }
+            .product-col {
+                width: calc(100% / 5);
+                margin-bottom: 32px;
+
+                @include smallScreen {
+                    width: calc(100% / 2);
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+        .btn{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
+}

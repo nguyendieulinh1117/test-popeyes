@@ -1,0 +1,7 @@
+@import "@assets/scss/global";
+.tracking{
+    padding: 0 48px;
+    @include smallScreen{
+        padding: 0;
+    }
+}

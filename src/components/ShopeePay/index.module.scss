@@ -1,0 +1,344 @@
+.shopeepay {
+    position: relative;
+    background-color: #f5f1ef;
+  }
+  
+  .header {
+    // position: fixed;
+    width: 100%;
+    padding-top: 22px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 9999;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .logo img {
+    height: 35px;
+    /* @include Responsive(XS) {
+  height: 20px;
+  } */
+  }
+  .title {
+    color: #cecece;
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 20px;
+    font-weight: 400;
+    position: relative;
+  }
+  .title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 1px;
+    height: 20px;
+    background-color: #cecece;
+    transform: translateY(-50%);
+  }
+  
+  .language {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .vn {
+    padding-right: 10px;
+    position: relative;
+  }
+  
+  .vn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 20px;
+    background-color: #cecece;
+    transform: translateY(-50%);
+  }
+  
+  .language p {
+    margin: 0;
+    color: #000000;
+    cursor: pointer;
+  }
+  
+  .language p.active {
+    color: #ff7d01;
+  }
+  
+  .header_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .main {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 50px;
+  }
+  
+  .main .order_detail {
+    width: 25%;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 16px;
+  }
+  
+  .order_detail .title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    margin-bottom: 12px;
+    color: #25282d;
+    padding-left: unset;
+  }
+  .order_detail .title::before {
+    position: unset;
+    width: unset;
+    height: unset;
+    content: unset;
+    top: unset;
+    left: unset;
+  }
+  .order_detail .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+  }
+  
+  .order_detail .item p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #666666;
+  }
+  
+  .order_detail .item p.amount {
+    font-size: 18px;
+    color: #000000;
+  }
+  .symbol {
+    text-decoration: underline;
+  }
+  
+  .order_detail .item:last-child {
+    border-top: 1px solid #cecece;
+  }
+  
+  .scan_qr {
+    width: 75%;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  
+  .scan_qr .top {
+    background-color: #ee4d2d;
+    padding: 16px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .scan_qr .top p {
+    margin: 0;
+    font-size: 18px;
+  }
+  .scan_qr .top .download {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .download button {
+    outline: 0;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 5px 7px;
+    border-radius: 4px;
+  }
+  
+  .qr_code {
+    padding: 64px 0;
+    text-align: center;
+    border-bottom: 1px solid #cecece;
+    margin: 0 16px;
+  }
+  
+  .qr_code p {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 16px;
+  }
+  
+  .qr_code p span {
+    color: #ee4d2d;
+  }
+  
+  .qr_code_main {
+    width: 208px;
+    margin: auto;
+  }
+  
+  .qr_code_img {
+    width: max-content;
+    height: 208px;
+    border: 1px solid #e8e8e8;
+    position: relative;
+    margin: auto;
+  }
+  
+  .qr_code_img img {
+    height: 100%;
+  }
+  .qr_code_img .img_absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 54px;
+    transform: translate(-50%, -50%);
+  }
+  .img_absolute img {
+    width: 100%;
+  }
+  
+  .content_bottom {
+    padding: 8px 0;
+    font-size: 12px;
+    background: #e8e8e8;
+  }
+  
+  .how_to_scan {
+    padding: 16px;
+    border-bottom: 1px solid #cecece;
+    text-align: center;
+  }
+  
+  .how_to_scan p {
+    text-align: left;
+  }
+  
+  .how_to_scan img {
+    width: 75%;
+    margin: auto;
+  }
+  
+  .footer {
+    padding: 22px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fbfbfb;
+  }
+  
+  .footer_item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer_item p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .footer_item p.copyright {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .footer_item .mail {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+  }
+  
+  .mail p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .mail p.copyright {
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .mail a {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgb(238, 77, 45);
+  }
+  .mail span {
+    width: 1px;
+    height: 11px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .footer_item img {
+    width: auto;
+  }
+  
+  .bottom {
+    margin-bottom: 0 !important;
+  }
+  @media screen and (max-width: 1200px) {
+    .main .order_detail {
+        width: 40%;
+    }
+    .scan_qr {
+        width: 60%;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .main {
+        flex-direction: column;
+    }
+    .main .order_detail {
+        width: 100%;
+    }
+    .scan_qr {
+        width: 100%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+  }
+  
+  @media screen and (max-width: 575px) {
+    .title {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .scan_qr .top p {
+        font-size: 14px;
+    }
+    .scan_qr .top .download {
+        font-size: 12px;
+    }
+    .logo img {
+        height: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .scan_qr .top .download {
+        font-size: 10px;
+    }
+  }
+  

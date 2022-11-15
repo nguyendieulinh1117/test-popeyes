@@ -1,0 +1,104 @@
+.item-store {
+    width: 100%;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dfdfdf;
+    border-radius: 8px;
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 0px;
+        gap: 8px;
+        .info-wrap {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0px;
+            gap: 8px;
+            font-family: "Archivo";
+            color: #292929;
+            .name {
+                margin: 0;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 17px;
+            }
+            .info {
+                p {
+                    margin: 0;
+                    font-weight: 400;
+                    font-size: 13px;
+                    line-height: 20px;
+                }
+            }
+        }
+        .btn-wrap {
+            display: flex;
+            gap: 4px;
+        }
+        .btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 6px 12px;
+            gap: 2px;
+            background: #fff4f4;
+            border-radius: 56px;
+            text-transform: unset;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 400;
+            border-color: #ffffff;
+            &:hover {
+                color: #dc3a35;
+                background-color: #ffffff;
+                border-color: #dc3a35;
+            }
+            svg {
+                width: 18px;
+                height: 18px;
+                fill: #dc3a35;
+                path {
+                    stroke-width: 0;
+                    &:nth-child(2) {
+                        fill: #fff4f4;
+                    }
+                }
+            }
+        }
+        .btn-direct {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 6px 12px;
+            gap: 2px;
+            background: #fff4f4;
+            border-radius: 56px;
+            text-transform: unset;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 400;
+            border-color: #ffffff;
+            &:hover {
+                color: #dc3a35;
+                background-color: #ffffff;
+                border-color: #dc3a35;
+            }
+            svg {
+                width: 18px;
+                height: 18px;
+
+                path {
+                    &:nth-child(2) {
+                        fill: #dc3a35;
+                    }
+                }
+            }
+        }
+    }
+}

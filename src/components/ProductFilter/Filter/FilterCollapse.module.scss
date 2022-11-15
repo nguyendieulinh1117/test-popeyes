@@ -1,0 +1,140 @@
+.filter-collapse {
+    overflow: hidden;
+    &.active {
+        .head {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px 0;
+        cursor: pointer;
+
+        label {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #292929;
+            cursor: pointer;
+        }
+
+        svg {
+            transform: rotate(0deg);
+            transition: all 0.5s;
+        }
+    }
+
+    .body {
+        position: relative;
+
+        ul {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+
+            li {
+                label {
+                    input {
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        margin: 0;
+                        opacity: 0;
+
+                        &:checked+p {
+                            color: #DC3A35;
+                            border-color: #DC3A35;
+                            background-color: #fff;
+
+                            span {
+                                position: absolute;
+                                width: 26px;
+                                line-height: 0;
+                                top: -13px;
+                                right: -13px;
+                                height: 26px;
+                                cursor: pointer;
+                                background-color: #DC3A35;
+                                transform: rotate(45deg);
+
+                                &::before,
+                                &::after {
+                                    position: absolute;
+                                    content: '';
+                                    width: 6px;
+                                    height: 1px;
+                                    background-color: #fff;
+                                    border-radius: 1px;
+                                    top: 20px;
+                                    right: 10px;
+                                }
+
+                                &::after {
+                                    transform: rotate(90deg);
+                                }
+                            }
+
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        color: #8A8A8A;
+                        background: #F2F2F2;
+                        border-radius: 8px;
+                        padding: 7px 12px;
+                        display: block;
+                        cursor: pointer;
+                        border: 1px solid #0000;
+                        position: relative;
+                        overflow: hidden;
+                        display: flex;
+                        text-transform: capitalize;
+
+                        figure{
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 50%;
+                            margin-right: 4px;
+                            border: 1px solid #F5F6F7;
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .action {
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 20px;
+
+        button {
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+
+            span {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+                color: #DC3A35;
+            }
+
+            svg {
+                margin-left: 4px;
+            }
+        }
+    }
+}

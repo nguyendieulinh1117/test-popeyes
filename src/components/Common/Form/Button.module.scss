@@ -1,0 +1,84 @@
+.button {
+    font-family: "Archivo";
+    outline: none;
+    padding: 12px 40px;
+    cursor: pointer;
+    border: 1px solid #dc3a35;
+    border-radius: 48px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+
+    svg {
+        vertical-align: middle;
+    }
+    &:focus {
+        border: 1px solid #dc3a35 !important;
+    }
+
+    &.primary {
+        color: #dc3a35;
+
+        &:hover {
+            color: #fff;
+            background-color: #dc3a35;
+        }
+
+        &:disabled {
+            background-color: #9b1c25;
+            border-color: #9b1c25;
+            cursor: not-allowed;
+        }
+        &:focus {
+            border: 1px solid #dc3a35 !important;
+        }
+    }
+
+    &.secondary {
+        color: #fff;
+        text-transform: none;
+        background-color: #dc3a35;
+
+        &:hover {
+            border-color: #9b1c25;
+            background-color: #9b1c25;
+        }
+
+        &:disabled {
+            background-color: #9b1c25;
+            border-color: #9b1c25;
+            cursor: not-allowed;
+        }
+    }
+    &.blue {
+        color: #3a589a;
+        text-transform: none;
+        border-color: #3a589a;
+
+        &:hover {
+            border-color: #3a589a;
+            background-color: #3a589a;
+            color: #fff;
+        }
+
+        &:disabled {
+            background-color: #4b92ff;
+            border-color: #4b92ff;
+            cursor: default;
+        }
+        &:focus {
+            border: 1px solid #3a589a !important;
+        }
+    }
+
+    &.disabled {
+        background-color: #9b1c25;
+        border-color: #9b1c25;
+        cursor: not-allowed;
+    }
+
+    &.full-width {
+        width: 100%;
+    }
+}

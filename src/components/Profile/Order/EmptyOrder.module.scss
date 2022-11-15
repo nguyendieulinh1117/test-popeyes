@@ -1,0 +1,28 @@
+@import "@assets/scss/global.scss";
+
+.emty-list-order {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0;
+    width: 100%;
+    background: #ffffff;
+
+    @include smallScreen {
+        padding: 32px 0 164px;
+    }
+
+    span {
+        font-size: 14px;
+        margin-bottom: 18px;
+        color: #292929;
+
+        @include smallScreen {
+            margin-bottom: 80px;
+        }
+    }
+
+    button {
+        text-transform: none;
+    }
+}

@@ -1,0 +1,137 @@
+@import "@assets/scss/global.scss";
+
+.product-related {
+    background-color: #fff;
+    padding: 16px;
+
+    @include smallScreen {
+        margin: 0 -16px;
+        padding-bottom: 48px;
+    }
+
+    .box {
+        overflow: hidden;
+        position: relative;
+
+        .title {
+            margin-bottom: 16px;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include smallScreen {
+                justify-content: center;
+            }
+
+            h3 {
+                margin: 0;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 28px;
+                text-transform: uppercase;
+
+                @include smallScreen {
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 24px;
+                }
+            }
+        }
+
+        .my-swiper {
+            overflow: initial;
+            position: static;
+
+            [class~="swiper-button-prev"],
+            [class~="swiper-button-next"] {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                width: 44px;
+                height: 44px;
+                background: #f2f2f2;
+                border-radius: 50%;
+
+                &:after {
+                    font-size: 15px;
+                    color: #545454;
+                }
+
+                &:hover {
+                    background: #c22026;
+
+                    &:after {
+                        color: #fff;
+                    }
+                }
+            }
+
+            [class~="swiper-button-prev"] {
+                left: initial;
+                right: 56px;
+            }
+
+            [class~="swiper-wrapper"] {
+                align-items: flex-start;
+
+                [class~="swiper-slide"] {
+                    height: 100%;
+                }
+            }
+
+            // [class~="swiper-button-next"] {}
+        }
+
+        .mobile-box {
+            display: flex;
+            flex-wrap: wrap;
+
+            .swiper-item {
+                width: 50%;
+                margin-bottom: 16px;
+            }
+        }
+
+        .btn {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+    }
+    .product-col {
+        > div {
+            figure {
+                width: 100%;
+                cursor: pointer;
+                padding-bottom: calc(405 / 300 * 100%);
+                position: relative;
+
+                > img {
+                    max-width: 100%;
+                    height: 100%;
+                    width: 100%;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    border: 0;
+                }
+                > div {
+                    max-width: 100% !important;
+                    height: 100% !important;
+                    width: 100% !important;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    border: 0;
+                }
+            }
+        }
+    }
+}
